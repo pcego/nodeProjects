@@ -16,7 +16,7 @@ router.get('/criar', function(req, res, next) {
 });
 
 router.get('/contato', function(req, res, next) {
-    res.render('blog/contacttUs');
+    res.render('blog/contactUs');
 });
 
 router.get('/post', function(req, res, next) {

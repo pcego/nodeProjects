@@ -1,6 +1,6 @@
 const mongoClient = require("mongodb").MongoClient
 
-mongoClient.connect("mongodb://localhost:27017/blog")
+mongoClient.connect("mongodb://localhost:27017/blog", {useNewUrlParser: true})
     .then(conn => global.conn = conn.db("blog")).catch(err => console.log(err))
 
 function findAll(callback){
