@@ -69,12 +69,18 @@
 		<div class="col s12 m10 offset-m1 l9 offset-l1">
 
                     <div class="post-preview">
+                        <% if(!docs || docs.length == 0){ %>
+                            <h4>Não Existem Postagens Cadastradas!</h4>
+                        <% } %>
+
                         <a href="#">
-                            <h4 class="post-title titleFont">
-                               posts
-                            </h4>
+                            <% docs.forEach(function(post){ %>
+                                <h4 class="post-title titleFont">
+
+                                </h4>
                         </a>
-                       <p class="post-meta"><i class="fa fa-clock-o"></i> 7 days ago by <a href="#">Author name</a></p>
+                        <p class="post-meta"><i class="fa fa-clock-o"></i> 7 days ago by <a href="#">Autor <%= post.autor %></a></p>
+                        <%})%>
                     </div>
                     <hr>
 

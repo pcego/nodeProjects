@@ -65,12 +65,11 @@
     <div class="row">
         <div class="col s12 m10 offset-m1 l9 offset-l1">
 
-            <form class="col s12" action="/post/create" method="post">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
+            <form class="col s12" action="/processar" method="post">
+                <!--<input type="hidden" name="_csrf" value="#{csrf}">-->
                 <div class="row">
                     <div class="input-field col s12">
-                        <input name="titulo" id="message-sub" type="text" class="validate">
+                        <input name="autor" id="message-sub" type="text" class="validate">
                         <label for="message-sub">Título</label>
                     </div>
                 </div>
