@@ -11,6 +11,18 @@ router.get('/', function(req, res, next) {
     });
 });
 
+router.get('/detalhes/:id', function(req, res, next){
+
+    var id = req.params.id
+    global.db.findOne(id, (error, doc)=> {
+        if (error) {
+            return console.log(error);
+        };
+        res.render('blog/samplePost', {doc});
+    });
+
+});
+
 router.get('/criar', function(req, res, next) {
     res.render('blog/postCreate');
 });
@@ -38,5 +50,9 @@ router.post('/processar', function(req, res, next) {
         res.redirect('/');
     })
 });
+
+router.get('/editar/', function(req, res, next) {
+
+})
 
 module.exports = router

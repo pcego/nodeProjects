@@ -6,11 +6,12 @@
   <title>Materialize themes</title>
 
   <!-- CSS  -->
-  <link href="blog/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="blog/css/index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link rel="stylesheet" href="blog/css/font-awesome-4.3.0/css/font-awesome.min.css">
-  <link rel="shortcut icon" href="blog/images/favicon (9).ico" type="image/x-icon">
-  <link rel="icon" href="blog/images/favicon (9).ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../blog/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../blog/css/index.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" href="../blog/css/font-awesome-4.3.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="../blog/images/favicon (9).ico" type="image/x-icon">
+  <link rel="icon" href="../blog/images/favicon (9).ico" type="image/x-icon">
 </head>
 <body>
 <div id="navbar" class="navbar-fixed scrollspy">
@@ -43,7 +44,7 @@
     <div class="section no-pad-bot">
       <div class="container valign">
         <br><br>
-        <h1 class="header center grey-text text-darken-2">{{$post->titulo}}</h1>
+        <h1 class="header center grey-text text-darken-2"><%= doc.autor %></h1>
         <div class="row center">
            <p class="post-meta"><i style="color: #616161" class="fa fa-clock-o"></i> 7 days ago by <a href="#" style="color: #616161">Author name</a></p>
         </div>
@@ -54,7 +55,7 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="blog/images/post.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="../blog/images/post.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
 <div class="container" id="startPosts">
@@ -65,9 +66,9 @@
 	<div class="row">
 		<div class="col s12 m10 offset-m1 l9 offset-l1 card-panel indigo lighten-4 black-text">
             <h4><em>Conteúdo</em></h4>
-			<p>{{$post->conteudo}}</p>
+			<p><%= doc.conteudo %></p>
 		</div>
-        @foreach($post->comentarios as $comentario)
+        <!--@foreach($post->comentarios as $comentario)
             <div class="col s12 m10 offset-m1 l9 offset-l1 card-panel indigo lighten-5 black-text">
                 <h5><em>Comentário</em></h5>
                     <p>{{$comentario->comentario}}</p>
@@ -77,7 +78,7 @@
                         Email: {{$comentario->email}}
                     </small>
             </div>
-        @endforeach
+        @endforeach-->
         <br>
 	</div>
 </div>
@@ -189,8 +190,8 @@
   <!--  Scripts-->
   
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="blog/js/materialize.js"></script>
-  <script src="blog/js/init.js"></script>
+  <script src="../blog/js/materialize.js"></script>
+  <script src="../blog/js/init.js"></script>
   <script>
   $(document).ready(function(){
     $('.materialboxed').materialbox();

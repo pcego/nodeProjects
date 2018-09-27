@@ -5,10 +5,6 @@ var cookieParser = require('cookie-parser');
 //var bodyParser = require('body-parser')
 var logger = require('morgan');
 
-//csrf token
-//var csrf = require('csurf');
-//var csrfProtection = csrf({ cookie: true });
-//var parseForm = bodyParser.urlencoded({ extended: false });
 
 var usersRouter = require('./routes/users');
 var blogRouter = require('./routes/blogRoutes');
