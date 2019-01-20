@@ -43,7 +43,8 @@ router.post('/processar', function(req, res, next) {
 
     const autor = req.body.autor
     const conteudo = req.body.conteudo
-    global.db.insert({autor, conteudo}, (err, result)=>{
+    /* observe a referencia ao arquivo de conexão dbMySql */
+    global.dbMySql.insert([autor, conteudo], (err, result)=>{
         if(err){
             return console.log(err)
         }
